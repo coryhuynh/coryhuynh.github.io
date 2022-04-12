@@ -1,4 +1,4 @@
-@font-face { font-family: futura-condensed; src: url('Futura-Condensed-Regular.TTF'); } 
+@font-face { font-family: futura-condensed; src: url('/style/css/Futura-Condensed-Regular.ttf'); } 
 body{
 	margin:0;
 	background-color: #000000;
@@ -68,7 +68,7 @@ main{
 		img{
 			margin: auto auto;
 			object-fit: cover;
-			border-radius: 11vh;
+			border-radius: 6vh;
 			border-style: solid;
 			border-color: #f8f8f8;
 			box-shadow: 0 0 13px #f8f8f8;
