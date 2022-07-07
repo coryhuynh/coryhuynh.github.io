@@ -17,9 +17,7 @@
 
 <body>
 
-    <div class="load">
 
-    </div>
   <video autoplay muted loop id="fog">
     <source src="style/fog.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
@@ -29,8 +27,8 @@
     <ul class="menu">
         <li><a href="#" data-overlay-activate="continue">Cory Huynh</a></li>
         <li><a href="#" data-overlay-activate="load">Projects</a></li>
-        <li><a href="#" data-overlay-activate="new">Load</a></li>
-        <li><a href="#" data-overlay-activate="credits">Credits</a></li>
+        <li><a href="#" data-overlay-activate="new" id="resume-list-item">Resume</a></li>
+        <li><a href="#" data-overlay-activate="credits">Contact</a></li>
         <li><a href="#" data-overlay-activate="quit">Quit</a></li>
     </ul>
 
@@ -43,22 +41,22 @@
     <p></p>
 
 </div>
-<div class="overlay js-overlay-new">
+<div class="overlay js-overlay-new" id="resume-overlay">
     <div class="borders"></div>
     <div class="catcher" data-overlay-close="new"></div>
-    <p>Start a new game?</p>
+    <p>Load Resume?</p>
     <div class="overlay__controls">
-        <a href="#" class="btn btn__yes">Yes</a>
+        <a href="#" class="btn btn__yes" id="btn_yes_Resume">Yes</a>
         <a href="#" class="btn btn__no">No</a>
     </div>
 </div>
 <div class="overlay js-overlay-load">
     <div class="borders"></div>
     <div class="catcher" data-overlay-close="load"></div>
-    <p>Load a game</p>
+    <p>Load a project</p>
     <ul class="saves">
-        <li class="saves__quick"><a href="projects/ray-tracing.html">Ray Tracer</a></li>
-        <li class="saves__auto"><a href="#">Shadow Mapping</a></li>
+        <li class="saves__quick" id="raytrace"><a href="#">Ray Tracer</a></li>
+        <li class="saves__auto" id="shadowmap"><a href="#">Shadow Mapping</a></li>
         <li class="saves__auto"><a href="#">Bullet Journal</a></li>
         <li class="saves__index"><a href="#">Skyrim</a></li>
         <li class="saves__index"><a href="#">Skyrim</a></li>
@@ -85,6 +83,76 @@
     <div class="overlay__controls">
         <a href="#" class="btn btn__yes">Yes</a>
         <a href="#" class="btn btn__no">No</a>
+    </div>
+</div>
+
+<div class="project-container" id="raytrace-container">
+    <div class="content-container">
+        <h1>Ray Tracing</h1>
+        <div class="project-update">
+            <h1>Update #2: Indirect Lighting with Path Tracing</h1>
+            <p>Added indirect lighting ...</p>
+            <img src="./projects/ray-tracing-images/cornellRR.png">
+            <img src="./projects/ray-tracing-images/dragon.png">
+        </div>
+        <div class="project-update">
+            <h1>Update #1: Direct Lighting</h1>
+            <p>Added direct lighting ...</p>
+            <img src="./projects/ray-tracing-images/cornell.png">
+            <img src="./projects/ray-tracing-images/sphere.png">
+        </div>
+        <div class="project-update">
+            <p>Some textasdfasdfasdjkf;alskdjf;laksjdf;laksjd;flkajsdl;fkajsdl;fk</p>
+            <img src="./projects/ray-tracing-images/scene7.png">
+        </div>
+    </div>
+</div>
+<div class="project-container" id="shadow-mapping-container">
+    <div class="content-container">
+        <h1>Shadow Mapping</h1>
+        <div class="project-update">
+            <h1>What is shadow mapping?</h1>
+            <p>Like the name suggests, shadow mapping is a technique used in computer graphics to generate shadows
+                Why shadow mapping?
+Firstly, shadows make things look more realistic, gives dimensions of depth, and just looks cool.
+In ray tracing realistic shadows are much easier to implement, rays are shot from the camera and when they intersect with objects, it is easy to detect if the object is occluded by a light source.
+However, given the computing time of ray tracing, how can we get shadows using a rasterizer instead?
+This is where shadow mapping comes in. it allows for the real time generation of shadows using a rasterizer.
+            </p>
+            <img src="./projects/shadow-mapping-images/capy-shadows.png">
+            <img src="./projects/shadow-mapping-images/capy-no-shadows.png">
+        </div>
+        <div class="project-update">
+            <h1>Update #1: Direct Lighting</h1>
+            <p>Added direct lighting ...</p>
+            <img src="./projects/ray-tracing-images/cornell.png">
+            <img src="./projects/ray-tracing-images/sphere.png">
+        </div>
+        <div class="project-update">
+            <p>Some textasdfasdfasdjkf;alskdjf;laksjdf;laksjd;flkajsdl;fkajsdl;fk</p>
+            <img src="./projects/ray-tracing-images/scene7.png">
+        </div>
+    </div>
+</div>
+<div class="project-container" id="resume-container">
+    <div class="content-container">
+        <h1>Resume</h1>
+        <div class="project-update">
+            <h1>Update #2: Indirect Lighting with Path Tracing</h1>
+            <p>Added indirect lighting ...</p>
+            <img src="./projects/ray-tracing-images/cornellRR.png">
+            <img src="./projects/ray-tracing-images/dragon.png">
+        </div>
+        <div class="project-update">
+            <h1>Update #1: Direct Lighting</h1>
+            <p>Added direct lighting ...</p>
+            <img src="./projects/ray-tracing-images/cornell.png">
+            <img src="./projects/ray-tracing-images/sphere.png">
+        </div>
+        <div class="project-update">
+            <p>Some textasdfasdfasdjkf;alskdjf;laksjdf;laksjd;flkajsdl;fkajsdl;fk</p>
+            <img src="./projects/ray-tracing-images/scene7.png">
+        </div>
     </div>
 </div>
 <!-- Skyrim thing-->

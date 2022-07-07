@@ -2,6 +2,29 @@ const menuItems = document.querySelectorAll('ul.menu li a');
 const clickCatchers = document.querySelectorAll('.catcher');
 const yesBtns = document.querySelectorAll('a.btn__yes');
 const noBtns = document.querySelectorAll('a.btn__no');
+
+
+const raytracer = document.getElementById('raytrace');
+raytracer.addEventListener('click', e=>{
+    openProject('raytrace-container');
+})
+const shadowmapper = document.getElementById('shadowmap');
+shadowmapper.addEventListener('click', e=>{
+    openProject('shadow-mapping-container');
+})
+
+const resumeYes = document.getElementById('btn_yes_Resume');
+resumeYes.addEventListener('click', e=>{
+    openProject('resume-container');
+})
+
+document.addEventListener("keydown", key=>{
+    if(key.code === "Enter"){
+        if(activeListItem.id == "resume-list-item"){
+            openProject('resume-container');
+        }
+    }
+})
 let activeListItem = null;
 const menus = [
     `.js-overlay-continue`,
@@ -42,7 +65,20 @@ Array.from(clickCatchers).forEach(c => {
 // function cancel(e) {
     
 // }
-
+function openProject(currProj){
+    const projects = document.getElementsByClassName("project-container");
+    for(var i =0; i < projects.length; i++){
+        if(projects.item(i).id != currProj){
+            projects.item(i).style.opacity = 0;
+            projects.item(i).style.zIndex = "1";
+        }
+    }
+    const container = document.getElementById(currProj);
+    container.style.opacity = 1;
+    container.style.zIndex = "2";
+    const logo = document.getElementById('logo');
+    logo.style.opacity = 0;
+}
 function activateOverlay(event) {
     event.preventDefault();
     if(activeListItem  != null){
