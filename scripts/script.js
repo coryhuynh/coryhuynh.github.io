@@ -3,7 +3,10 @@ const clickCatchers = document.querySelectorAll('.catcher');
 const yesBtns = document.querySelectorAll('a.btn__yes');
 const noBtns = document.querySelectorAll('a.btn__no');
 
-
+const autov = document.getElementById('autov');
+autov.addEventListener('click', e=>{
+    openProject('autov-container');
+})
 const raytracer = document.getElementById('raytrace');
 raytracer.addEventListener('click', e=>{
     openProject('raytrace-container');
@@ -13,9 +16,19 @@ shadowmapper.addEventListener('click', e=>{
     openProject('shadow-mapping-container');
 })
 
+const bulletj = document.getElementById('bulletj');
+bulletj.addEventListener('click', e=>{
+    openProject('bulletj-container');
+})
+
 const resumeYes = document.getElementById('btn_yes_Resume');
 resumeYes.addEventListener('click', e=>{
     openProject('resume-container');
+})
+
+const projectYes = document.getElementById('btn_yes_project');
+projectYes.addEventListener('click', e=>{
+    openProject('autov-container');
 })
 
 document.addEventListener("keydown", key=>{

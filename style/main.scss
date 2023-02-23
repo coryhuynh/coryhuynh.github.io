@@ -1,3 +1,9 @@
+/*
+FONT NEEDS TO BE CHANGED TO /style/css/... for github to use it
+
+local font
+@font-face { font-family: futura-condensed; src: url('Futura-Condensed-Regular.ttf'); } 
+*/
 @font-face { font-family: futura-condensed; src: url('/style/css/Futura-Condensed-Regular.ttf'); } 
 html, 
 body {
@@ -202,7 +208,7 @@ ul.menu {
     text-decoration: none;
     color: $text-gray;
     font-weight: bold;
-    
+
     &:before {
         color: #eee;
         font-weight: normal;
@@ -246,6 +252,9 @@ ul.menu {
         overflow-y: scroll;
         display: flexbox;
 
+        .full{
+            width: 94%;
+        }
         img{
             width: 47%;
         }
@@ -261,14 +270,15 @@ ul.menu {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: rgba($color: #f1f1f1, $alpha: 0.3); 
   border-radius: 6px;
   margin-top: 12px;
   margin-bottom: 12px;
+  opacity: 0.2;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(182, 182, 182);
+  background: rgba(182, 182, 182, 0.5);
   border-radius: 6px; 
 }
 

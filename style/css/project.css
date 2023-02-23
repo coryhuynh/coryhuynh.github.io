@@ -2,20 +2,9 @@
   font-family: futura-condensed;
   src: url("/style/css/Futura-Condensed-Regular.ttf");
 }
-
 body {
   margin: 0;
   background-color: #000000;
-}
-
-@-webkit-keyframes fadeOutAnimation {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
 }
 
 @keyframes fadeOutAnimation {
@@ -27,7 +16,6 @@ body {
     z-index: -1;
   }
 }
-
 .load {
   position: absolute;
   top: 0;
@@ -36,12 +24,9 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #000000;
-  -webkit-animation: fadeOutAnimation ease 1.5s;
-          animation: fadeOutAnimation ease 1.5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: fadeOutAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .grid-container {
@@ -52,7 +37,6 @@ body {
   margin: 0;
   background-size: auto 100vh;
 }
-
 .grid-container .title {
   position: absolute;
   top: 20px;
@@ -64,7 +48,6 @@ body {
   background-size: contain;
   font-family: futura-condensed;
 }
-
 .grid-container .title p {
   margin: 6px auto;
   text-align: center;
@@ -78,27 +61,18 @@ main {
   width: 95%;
   right: 2.5%;
   height: 60%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: auto 1fr auto;
-      grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
   overflow-x: hidden;
   overflow-y: hidden;
 }
-
 main .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 90%;
 }
-
 main .item img {
   margin: auto auto;
   -o-object-fit: cover;
@@ -106,18 +80,14 @@ main .item img {
   border-radius: 6vh;
   border-style: solid;
   border-color: #f8f8f8;
-  -webkit-box-shadow: 0 0 13px #f8f8f8;
-          box-shadow: 0 0 13px #f8f8f8;
+  box-shadow: 0 0 13px #f8f8f8;
 }
-
 main .item .middle {
   height: 100%;
 }
-
 main .item .left {
   height: 60%;
 }
-
 main .item .right {
   height: 60%;
 }
@@ -137,5 +107,4 @@ main .item .right {
   font-size: 3.5vh;
   color: white;
   text-shadow: 2px 3px #000000;
-}
-/*# sourceMappingURL=project.css.map */
+}/*# sourceMappingURL=project.css.map */

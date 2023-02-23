@@ -55,17 +55,17 @@
     <div class="catcher" data-overlay-close="load"></div>
     <p>Load a project</p>
     <ul class="saves">
-        <li class="saves__quick" id="raytrace"><a href="#">Ray Tracer</a></li>
-        <li class="saves__auto" id="shadowmap"><a href="#">Shadow Mapping</a></li>
-        <li class="saves__auto"><a href="#">Bullet Journal</a></li>
-        <li class="saves__index"><a href="#">Skyrim</a></li>
-        <li class="saves__index"><a href="#">Skyrim</a></li>
-        <li class="saves__index"><a href="#">Skyrim</a></li>
+        <li id="autov"><a href="#">Autonoumous Vehicle - 2022</a></li>
+        <li id="raytrace"><a href="#">Ray Tracer - 2022</a></li>
+        <li id="shadowmap"><a href="#">Shadow Mapping - 2021</a></li>
+        <li id="bulletj"><a href="#">Bullet Journal - 2021</a></li>
     </ul>
+    
     <div class="overlay__controls">
-        <a href="#"class="btn btn__yes">Yes</a>
+        <a href="#" id="btn_yes_project" class="btn btn__yes">Yes</a>
         <a href="#"class="btn btn__no">No</a>
     </div>
+    
 </div>
 <div class="overlay js-overlay-credits">
     <div class="borders"></div>
@@ -85,7 +85,35 @@
         <a href="#" class="btn btn__no">No</a>
     </div>
 </div>
-
+<div class="project-container" id="autov-container">
+    <div class="content-container">
+        <h1>Autonoumous Vehicle</h1>
+        <div class="project-update">
+            <h1>About</h1>
+            <p>This was a group project (me and two peers) for my Introduction to Autonoumous Vehicles class. 
+                At the beginning of the course we were given a box of components and the skeleton of an RC Car with a motor. Some of the notable components included
+                a camera, an NVIDIA Jetson Nano, and a VESC (Variable/Vedder Electric Speed Cotroller). The first task was to design and 3D print parts that would
+                allow the components to be mounted on skeleton car. We kept it simple and lasercut an acrylic plate with holes for mounting and 3D printed legs for the plate
+                as well as cases for the Jetson Nano and camera. Once all the parts fit together,</p>
+        </div>
+        <div class="project-update">
+            <img src="./projects/autonomous-car/car-components.jpg">
+            <img src="./projects/autonomous-car/car-completed.jpg">
+        </div>
+        <div class="project-update">
+            <h2>Three Autonoumous Laps using Python and OpenCV</h2>
+            <iframe width="420" height="315"
+            src="https://youtube.com/embed/7O6LAwRwPOg">
+            </iframe>
+        </div>
+        <div class="project-update">
+            <h2>Wildlife Conservation Protocol</h2>
+            <iframe width="420" height="315"
+            src="https://youtube.com/embed/9VnSp7tR_Mc">
+            </iframe>
+        </div>
+    </div>
+</div>
 <div class="project-container" id="raytrace-container">
     <div class="content-container">
         <h1>Ray Tracing</h1>
@@ -134,24 +162,56 @@ This is where shadow mapping comes in. it allows for the real time generation of
         </div>
     </div>
 </div>
+<div class="project-container" id="bulletj-container">
+    <div class="content-container">
+        <h1>Project Eucalyptus</h1>
+        <hr>
+        <div class="project-update">
+            <h1>What is Project Eucalyptus?</h1>
+            <p>
+                Project Eucalyptus is a bullet journalling web application that aims to give users an online alternative to bullet journaling.
+                This project was created in a 10 week span in a collaborative effort with my peers. I programmed and helped design many aspects of the projects' frontend
+                (using Javascript, HTML, and css) like the side navigation bar and timespan format menu.</br><br>
+                To experience the web app please follow the README on the github repository linked ahead - <a href="https://github.com/cse110-sp21-group19/cse110-sp21-group19">https://github.com/cse110-sp21-group19/cse110-sp21-group19</a>
+                 
+            </p>
+            <img class="full" src="./projects/bullet-journal/journal-screenshot.png">
+        </div>
+    </div>
+</div>
 <div class="project-container" id="resume-container">
     <div class="content-container">
         <h1>Resume</h1>
+        <hr>
         <div class="project-update">
-            <h1>Update #2: Indirect Lighting with Path Tracing</h1>
-            <p>Added indirect lighting ...</p>
-            <img src="./projects/ray-tracing-images/cornellRR.png">
-            <img src="./projects/ray-tracing-images/dragon.png">
+            <h1>Education</h1>
+            <h2>University of California - San  Diego</h2>
+            <h4>Masters of Science in Computer Engineering - Incoming</h4>
+            <h2>University of California - San  Diego</h2>
+            <h4>Bachelor of Science in Computer Engineering - 2019 to 2023</h4>
         </div>
         <div class="project-update">
-            <h1>Update #1: Direct Lighting</h1>
-            <p>Added direct lighting ...</p>
-            <img src="./projects/ray-tracing-images/cornell.png">
-            <img src="./projects/ray-tracing-images/sphere.png">
+            <h1>Experience</h1>
+            <h2>Amazon Web Services - Seattle, WA - Summer 2022</h2>
+            <h3>Software Development Engineering Intern</h3>
+            <ul>
+                <li>Developed a project using AWS Cloud Services (and Java) that overhauled a system
+                     performing BOM rollups on a Product Lifecycle Management software to address serious 
+                     security issues, improve data validation, increase efficiency, and unlock further scalability.</li>
+                <li>Wrote detailed design documents that effectively communicated the architectural design to my team 
+                    and allowed for the continuing iteration of my project.</li>
+              </ul>  
+             <h2>Calnetix Technologies - Cerritos, CA - Summer 2021</h2>  
+             <h3>Power Electronics Engineering Intern</h3>
+             <ul>
+                <li>Created a graph view for motor control GUI (Graphical User Interface) in Visual Basic that centralized the stream of data coming from a connected motor.</li>
+                <li>Diagnosed problems that caused GUI’s performance to drop and administered solutions that improved user responsiveness and productivity. </li>
+                <li>Installed gate driver boards and power MOSFETS on high voltage (5kV) variable speed drives and performed functional tests</li>
+            </ul> 
         </div>
         <div class="project-update">
-            <p>Some textasdfasdfasdjkf;alskdjf;laksjdf;laksjd;flkajsdl;fkajsdl;fk</p>
-            <img src="./projects/ray-tracing-images/scene7.png">
+            <h1>Skills</h1>
+            
         </div>
     </div>
 </div>
