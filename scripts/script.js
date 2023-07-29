@@ -7,6 +7,18 @@ const autov = document.getElementById('autov');
 autov.addEventListener('click', e=>{
     openProject('autov-container');
 })
+const boxing = document.getElementById('box');
+boxing.addEventListener('click', e=>{
+    openProject('boxing-container');
+})
+const mars = document.getElementById('mars');
+mars.addEventListener('click', e=>{
+    openProject('mars-container');
+})
+const nature = document.getElementById('nature');
+nature.addEventListener('click', e=>{
+    openProject('nature-container');
+})
 const raytracer = document.getElementById('raytrace');
 raytracer.addEventListener('click', e=>{
     openProject('raytrace-container');
