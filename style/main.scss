@@ -50,6 +50,17 @@ $border-gray: #444;
 
 $indexes: ("34", "35", "36");
 
+#disclaimer {
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    font-size: 1.2vh;
+    color: #777777;
+    margin: 1%;
+    width: 20%;
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
 #logo{
     position:fixed;
     z-index: 2;

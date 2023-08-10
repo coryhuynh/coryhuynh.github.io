@@ -51,6 +51,19 @@ body {
   overflow: hidden;
   font-family: futura-condensed, sans-serif;
 }
+a#disclaimer{
+  color:#777777;
+}
+#disclaimer {
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  font-size: 1.2vh;
+  color: #777777;
+  margin: 1%;
+  width: 20%;
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
 
 #logo {
   position: fixed;

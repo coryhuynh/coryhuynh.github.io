@@ -23,6 +23,7 @@
     Your browser does not support HTML5 video.
   </video>
   <img src="style/logo.png" alt="Logo" id="logo">
+  <h5 id="disclaimer">Disclaimer: Website is a parody of the Elder Scrolls V: Skyrim Menu (base code taken from <a style="color:#777777" href="https://codepen.io/BitsPls/pen/gmNxXO">CodePen</a>). Logo is a parody of the Bethesda Game Studios Logo</h5>
 
     <ul class="menu">
         <li><a href="#" data-overlay-activate="continue">Cory Huynh</a></li>
@@ -36,10 +37,7 @@
     <div class="borders"></div>
     <div class="catcher" data-overlay-close="continue"></div>
     <p>About me</p>
-    <p>I am currently a 4th year computer engineering undergraduate and incoming graduate student at UCSD
-        <br>
-        <br>
-        I like Skyrim and food
+    <p>I am currently a graduate student studying for master's degree in computer engineering at the University of California San Diego.
         <br>
         <br>
         Please enjoy a sample of the projects I'm proud of. And don't forget to leave your shoes at the door!
@@ -65,8 +63,8 @@
         <li id="nature"><a href="#">Nature Photography VR - 2023</a></li>
         <li id="box"><a href="#">Odd Even Boxing - 2023</a></li>
         <li id="anim"><a href="#">Animation Engine - coming soon</a></li>
-        <li id="autov"><a href="#">Autonoumous Vehicle - 2022</a></li>
-        <li id="raytrace"><a href="#">Ray Tracer - 2022</a></li>
+        <li id="autov"><a href="#">Autonomous Vehicle - 2022</a></li>
+        <li id="raytrace"><a href="#">Path Tracer - 2022</a></li>
         <li id="shadowmap"><a href="#">Shadow Mapping - 2021</a></li>
         <li id="bulletj"><a href="#">Bullet Journal - 2021</a></li>
     </ul>
@@ -95,36 +93,41 @@
 </div>
 <div class="project-container" id="autov-container">
     <div class="content-container">
-        <h1>Autonoumous Vehicle</h1>
+        <h1>Autonomous Vehicle</h1>
         <hr>
         <div class="project-update">
             <h2>About</h2>
-            <p>This was a group project (me and two peers) for my Introduction to Autonoumous Vehicles class. 
-                At the beginning of the course we were given a box of components and the skeleton of an RC Car with a motor. Some of the notable components included
-                a camera, an NVIDIA Jetson Nano, and a VESC (Variable/Vedder Electric Speed Cotroller). The first task was to design and 3D print parts that would
-                allow the components to be mounted on skeleton car. We kept it simple and lasercut an acrylic plate with holes for mounting and 3D printed legs for the plate
-                as well as cases for the Jetson Nano and camera. Once all the parts fit together, we had to begin building our circuit which included soldering wires
-                and connecting the correect connectors. Once everything was receiving power, we configured our VESC to ensure that our future program can control the motor with no issues</p>
+            <p> This was a project done by 3 people to convert a basic RC Car with just a motor, servo, and battery into an Autonomous Vehicle. Some notable components that allowed for this conversion are:
+                <ul>
+                    <li>Camera that can output video</li>
+                    <li>NVIDIA Jetson Nano</li>
+                    <li>VESC (Variable/Vedder Electric Speed Controller)</li>
+                </ul>
+                To attach these components onto the car, we laser cut an acrylic plate with holes to route wires and then 3D printed supports for the plate along with housing for the electrical components.
+                Once connected, we were able to ssh into the Jetson Nano which uses a form linux as its OS and code directly on it. One of the first things we did was use a software called <a href="https://www.donkeycar.com/">DonkeyCar</a>
+                to do machine learning using images taken from the camera as we manually drove the RC Car around a track with a game controller. After multiple attempts of gathering data and training, we were able to
+                get some sub-par results. We think this was due to the track being reflective of sunlight which made gathering good data difficult. Our next 2 projects with the car used Python, OpenCV, and an API
+                that interacts with our VESC to autonomously drive the car using computer vision</p>
         </div>
         <div class="project-update">
             <img src="./projects/autonomous-car/car-components.jpg">
             <img src="./projects/autonomous-car/car-completed.jpg">
         </div>
         <div class="project-update">
-            <h2>Three Autonoumous Laps using Python and OpenCV</h2>
-            <p>One of the projects we created with our car was to have it drive around a track autonomously. First, I used OpenCV to detect lane lines on both sides of the car.
-                From that, I would receive two lines in which I calculated the Bisector which would be used to steer our car. The following video shows 3 autonoumous laps using this method.
+            <h2>Three Autonomous Laps using Python and OpenCV</h2>
+            <p>To accomplish this project, I used OpenCV to filter the video feed and detect lane lines on both sides of the car.
+                From that, I would receive two lines in which I calculated the bisector whose angle would be used to steer our car. The following video shows 3 autonomous laps using this method.
             </p>
-            <iframe width="420" height="315"
+            <iframe width="600" height="400"
             src="https://youtube.com/embed/7O6LAwRwPOg">
             </iframe>
         </div>
         <div class="project-update">
             <h2>Wildlife Conservation Protocol</h2>
             <p>Another fun project we did was using object detection to adjust driving behavior. For the object detection I used the COCO (Common objects in context) 
-                pre trained model in order to detect animals such as a raccoon and pedestrians. This combined with a simple form of distance estimation, I am able to program the different 
+                pre-trained model in order to detect animals such as a raccoon and pedestrians. This combined with a simple form of distance estimation, I am able to program the different
             behaviors according to the object immediately in front of the vehicle seen in the video below. Enjoy!</p>
-            <iframe width="420" height="315"
+            <iframe width="600" height="400"
             src="https://youtube.com/embed/9VnSp7tR_Mc">
             </iframe>
         </div>
@@ -132,7 +135,7 @@
 </div>
 <div class="project-container" id="raytrace-container">
     <div class="content-container">
-        <h1>Ray Tracing</h1>
+        <h1>Path Tracer</h1>
         <hr>
         <div class="project-update">
             <p>During the spring of 2022, I created a path tracer for my computer graphics class. I started with a 
@@ -242,15 +245,23 @@ This is where shadow mapping comes in. it allows for the real time generation of
         <h1>Mad Martians</h1>
         <hr>
         <div class="project-update">
-            <h2>What is Project Eucalyptus?</h2>
+            <h2>What is Mad Martians?</h2>
             <p>
-                Project Eucalyptus is a bullet journalling web application that aims to give users an online alternative to bullet journaling.
-                This project was created in a 10 week span in a collaborative effort with my peers. I programmed and helped design many aspects of the projects' frontend
-                (using Javascript, HTML, and css) like the side navigation bar and timespan format menu.</br><br>
-                To experience the web app please follow the README on the github repository linked ahead - <a href="https://github.com/cse110-sp21-group19/cse110-sp21-group19">https://github.com/cse110-sp21-group19/cse110-sp21-group19</a>
-                 
+                Mad Martians is a 3D, 4-player co-op tower defense game inspired by games like <i><b>Orcs Must Die</b></i> and <i><b>Dungeon Defenders 2</b></i>. <br><br>
+                <img class="full" src="./projects/mad-martians/screenshot.png">
+                <br><br>
+                It was built from scratch by 7 people in 10 weeks
+                using C++, OpenGL, and a few other libraries for audio and networking. My role within this project involved working on the rendering/graphics engine where I parsed data coming from the game server
+                and rendered the game objects on the client. Lighting was done using Blinn-Phong Shading. I was also involved in creating physics based particle effects along with creating simple animations in the graphics shaders. This was one of the most
+                fun experiences I've had as a software developer and I hope you take look at our creation.
+                <br><br>
+                Here is a link to a development journal page where you can see reports on our team's progress (our original project name was Mars Rovers): <a href="https://www.notion.so/mars-rover/Mars-Rovers-Home-7e0c599d9ff34d6b93d832b4794f0d8b">Notion Link</a>
+                <br>
+                Here is a livestream VOD where our group presented our game (Mad Martians starts at 47:23):<br><br>
+                <iframe width="600" height="400"
+                        src="https://youtube.com/embed/IoI5MT1a5uM">
+                </iframe>
             </p>
-            <img class="full" src="./projects/bullet-journal/journal-screenshot.png">
         </div>
     </div>
 </div>
@@ -260,15 +271,25 @@ This is where shadow mapping comes in. it allows for the real time generation of
         <h1>Nature Photography VR</h1>
         <hr>
         <div class="project-update">
-            <h2>What is Project Eucalyptus?</h2>
+            <h2>What is Nature Photography VR?</h2>
             <p>
-                Project Eucalyptus is a bullet journalling web application that aims to give users an online alternative to bullet journaling.
-                This project was created in a 10 week span in a collaborative effort with my peers. I programmed and helped design many aspects of the projects' frontend
-                (using Javascript, HTML, and css) like the side navigation bar and timespan format menu.</br><br>
-                To experience the web app please follow the README on the github repository linked ahead - <a href="https://github.com/cse110-sp21-group19/cse110-sp21-group19">https://github.com/cse110-sp21-group19/cse110-sp21-group19</a>
+                A Virtual Reality game inspired by <i><b>Pokemon Snap</b></i> where the player explores a natural environment and takes pictures of the surrounding wildlife to earn points. This was created
+                by 2 people in a 3 week period using the Unity Game Engine. Disclaimer: game uses free assets from the Unity Store<br><br>
+                <img class="full" src="./projects/nature/screenshot.png"> <br><br>
+                Some unique features of this game: <br>
+                <ul>
+                    <li>Intuitive Controls: The camera feels great in hand and taking a picture with the right trigger feels natural.</li>
+                    <li>Movement: movement is performed by drawing a path on the floor and once done, the player character will follow that path.</li>
+                    <li>Photo Gallery: visit the photo gallery to view the pictures you took and spawn a picture frame that can be translated, scaled, and rotated.</li>
+                    <li>Audio: There is directional audio to help the player locate animals</li>
+                 </ul>
+                Here is a link to a short developer log - <a href="https://www.notion.so/CSE-165-Final-Project-184ac438e2424b58b43758abed722bc3">Notion Link</a> <br><br>
+                Here is a trailer I made for the game <br><br>
+            <iframe width="600" height="400"
+                    src="https://youtube.com/embed/7TEeFM8eI44">
+            </iframe>
                  
             </p>
-            <img class="full" src="./projects/bullet-journal/journal-screenshot.png">
         </div>
     </div>
 </div>
@@ -278,57 +299,19 @@ This is where shadow mapping comes in. it allows for the real time generation of
         <h1>Odd Even Boxing</h1>
         <hr>
         <div class="project-update">
-            <h2>What is Project Eucalyptus?</h2>
+            <h2>What is Odd Even Boxing?</h2>
             <p>
-                Project Eucalyptus is a bullet journalling web application that aims to give users an online alternative to bullet journaling.
-                This project was created in a 10 week span in a collaborative effort with my peers. I programmed and helped design many aspects of the projects' frontend
-                (using Javascript, HTML, and css) like the side navigation bar and timespan format menu.</br><br>
-                To experience the web app please follow the README on the github repository linked ahead - <a href="https://github.com/cse110-sp21-group19/cse110-sp21-group19">https://github.com/cse110-sp21-group19/cse110-sp21-group19</a>
-                 
+                A simple math game aimed to help people with Parkinson's Disease get both physical and cognitive stimulation. This project was created by two people and a stakeholder. Our stakeholder,
+                Marty Ace
             </p>
-            <img class="full" src="./projects/bullet-journal/journal-screenshot.png">
         </div>
     </div>
 </div>
 <div class="project-container" id="resume-container">
     <div class="content-container">
-        <div class="project-update">
-            <h1>Education</h1>
-            <hr>
-            <h2>University of California - San  Diego</h2>
-            <h4>Masters of Science in Computer Engineering - Incoming</h4>
-            <h2>University of California - San  Diego</h2>
-            <h4>Bachelor of Science in Computer Engineering - 2019 to 2023</h4>
-        </div>
-        <div class="project-update">
-            <h1>Experience</h1>
-            <hr>
-            <h2>Amazon Web Services - Seattle, WA - Summer 2022</h2>
-            <h3>Software Development Engineering Intern</h3>
-            <ul>
-                <li>Developed a project using AWS Cloud Services (and Java) that overhauled a system
-                     performing BOM rollups on a Product Lifecycle Management software to address serious 
-                     security issues, improve data validation, increase efficiency, and unlock further scalability.</li>
-                <li>Wrote detailed design documents that effectively communicated the architectural design to my team 
-                    and allowed for the continuing iteration of my project.</li>
-              </ul>  
-             <h2>Calnetix Technologies - Cerritos, CA - Summer 2021</h2>  
-             <h3>Power Electronics Engineering Intern</h3>
-             <ul>
-                <li>Created a graph view for motor control GUI (Graphical User Interface) in Visual Basic that centralized the stream of data coming from a connected motor.</li>
-                <li>Diagnosed problems that caused GUI’s performance to drop and administered solutions that improved user responsiveness and productivity. </li>
-                <li>Installed gate driver boards and power MOSFETS on high voltage (5kV) variable speed drives and performed functional tests</li>
-            </ul> 
-        </div>
-        <div class="project-update">
-            <h1>Skills</h1>
-            <hr>
-            <h4><b>Proficient In  -  </b> C++, Java</h4>
-            
-            <h4><b>Prior Experience with  -  </b>C#, Python, Kotlin, MATLAB, Visual Basic, JavaScript, HTML, CSS, OpenGL, OpenCV</h4>
-            <h4><b>Other Software  -  </b> Git, PSpice, Android Studio </h4>
-            
-        </div>
+        <object data="Resume_2022v5.2.pdf" type="application/pdf" width="100%" height="100%">
+
+        </object>
     </div>
 </div>
 <!-- Skyrim thing-->
