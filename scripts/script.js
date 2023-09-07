@@ -19,6 +19,10 @@ const nature = document.getElementById('nature');
 nature.addEventListener('click', e=>{
     openProject('nature-container');
 })
+const anim = document.getElementById('anim');
+anim.addEventListener('click', e=>{
+    openProject('anim-container');
+})
 const raytracer = document.getElementById('raytrace');
 raytracer.addEventListener('click', e=>{
     openProject('raytrace-container');
