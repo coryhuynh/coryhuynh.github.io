@@ -119,6 +119,20 @@ ul.menu a:hover {
 ul.menu a.active {
   color: #fff;
 }
+a:link {
+  
+  color: #fff;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:visited {
+  color:#777;
+}
+a:hover {
+  color: #fff;
+}
+
+
 
 .overlay {
   height: 100%;
@@ -225,6 +239,9 @@ ul.menu a.active {
 }
 .btn__no:before {
   content: "Tab";
+}
+.project-update {
+  padding-right: 10px;
 }
 
 .project-container {

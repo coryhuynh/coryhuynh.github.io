@@ -42,10 +42,7 @@ resumeYes.addEventListener('click', e=>{
     openProject('resume-container');
 })
 
-const projectYes = document.getElementById('btn_yes_project');
-projectYes.addEventListener('click', e=>{
-    openProject('autov-container');
-})
+
 
 document.addEventListener("keydown", key=>{
     if(key.code === "Enter"){
